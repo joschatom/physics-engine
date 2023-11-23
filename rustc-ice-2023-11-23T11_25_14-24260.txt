@@ -1,0 +1,97 @@
+thread 'rustc' panicked at /rustc/fee5518cdd4435c60a57fe3bb734fc1a14abeb7a\compiler\rustc_errors\src\lib.rs:1000:33:
+Box<dyn Any>
+stack backtrace:
+   0:     0x7ffe8ccae64f - std::backtrace::Backtrace::force_capture::hc53caa1d10a0ff6f
+   1:     0x7ffe8ccae5b4 - std::backtrace::Backtrace::force_capture::hc53caa1d10a0ff6f
+   2:     0x7ffe5c97da77 - <tracing_subscriber[214a62c6197011f7]::fmt::format::Writer>::write_fmt
+   3:     0x7ffe8ccc7213 - std::panicking::rust_panic_with_hook::h8b9f1129742ce58e
+   4:     0x7ffe5d0a3b68 - <rustc_passes[e79e249bc9c1d2d1]::check_attr::CheckAttrVisitor as rustc_hir[dec532ca088010f9]::intravisit::Visitor>::visit_pat_field
+   5:     0x7ffe5d0a1f29 - <rustc_passes[e79e249bc9c1d2d1]::check_attr::CheckAttrVisitor as rustc_hir[dec532ca088010f9]::intravisit::Visitor>::visit_pat_field
+   6:     0x7ffe5d09b729 - <rustc_passes[e79e249bc9c1d2d1]::check_attr::CheckAttrVisitor as rustc_hir[dec532ca088010f9]::intravisit::Visitor>::visit_pat_field
+   7:     0x7ffe5d0afb61 - <rustc_passes[e79e249bc9c1d2d1]::naked_functions::CheckInlineAssembly as rustc_hir[dec532ca088010f9]::intravisit::Visitor>::visit_expr
+   8:     0x7ffe5d0af98d - <rustc_passes[e79e249bc9c1d2d1]::naked_functions::CheckInlineAssembly as rustc_hir[dec532ca088010f9]::intravisit::Visitor>::visit_expr
+   9:     0x7ffe5d0a3d07 - <rustc_passes[e79e249bc9c1d2d1]::check_attr::CheckAttrVisitor as rustc_hir[dec532ca088010f9]::intravisit::Visitor>::visit_pat_field
+  10:     0x7ffe5d0a3d3d - <rustc_passes[e79e249bc9c1d2d1]::check_attr::CheckAttrVisitor as rustc_hir[dec532ca088010f9]::intravisit::Visitor>::visit_pat_field
+  11:     0x7ffe5d0a1fdf - <rustc_passes[e79e249bc9c1d2d1]::check_attr::CheckAttrVisitor as rustc_hir[dec532ca088010f9]::intravisit::Visitor>::visit_pat_field
+  12:     0x7ffe5d0a1f86 - <rustc_passes[e79e249bc9c1d2d1]::check_attr::CheckAttrVisitor as rustc_hir[dec532ca088010f9]::intravisit::Visitor>::visit_pat_field
+  13:     0x7ffe5c013fa3 - <rustc_passes[e79e249bc9c1d2d1]::liveness::IrMaps as rustc_hir[dec532ca088010f9]::intravisit::Visitor>::visit_expr
+  14:     0x7ffe5c0121e7 - <rustc_passes[e79e249bc9c1d2d1]::liveness::IrMaps as rustc_hir[dec532ca088010f9]::intravisit::Visitor>::visit_expr
+  15:     0x7ffe5c0121e7 - <rustc_passes[e79e249bc9c1d2d1]::liveness::IrMaps as rustc_hir[dec532ca088010f9]::intravisit::Visitor>::visit_expr
+  16:     0x7ffe5c013109 - <rustc_passes[e79e249bc9c1d2d1]::liveness::IrMaps as rustc_hir[dec532ca088010f9]::intravisit::Visitor>::visit_expr
+  17:     0x7ffe5c0121a7 - <rustc_passes[e79e249bc9c1d2d1]::liveness::IrMaps as rustc_hir[dec532ca088010f9]::intravisit::Visitor>::visit_expr
+  18:     0x7ffe5c0121a7 - <rustc_passes[e79e249bc9c1d2d1]::liveness::IrMaps as rustc_hir[dec532ca088010f9]::intravisit::Visitor>::visit_expr
+  19:     0x7ffe5c00dfd2 - rustc_passes[e79e249bc9c1d2d1]::liveness::check_liveness
+  20:     0x7ffe5c298f0f - <rustc_query_impl[13074ef8a9c5819f]::plumbing::QueryCtxt as rustc_query_system[e651ff0a024a25b9]::query::QueryContext>::load_side_effects
+  21:     0x7ffe5c2e71ef - <rustc_query_impl[13074ef8a9c5819f]::plumbing::QueryCtxt as rustc_query_system[e651ff0a024a25b9]::query::QueryContext>::load_side_effects
+  22:     0x7ffe5b5a40e1 - rustc_query_impl[13074ef8a9c5819f]::profiling_support::alloc_self_profile_query_strings
+  23:     0x7ffe5c366efe - <rustc_query_impl[13074ef8a9c5819f]::plumbing::QueryCtxt as rustc_query_system[e651ff0a024a25b9]::query::QueryContext>::load_side_effects
+  24:     0x7ffe5b5b293e - rustc_query_impl[13074ef8a9c5819f]::profiling_support::alloc_self_profile_query_strings
+  25:     0x7ffe5c07f055 - rustc_mir_build[bf3ebe4f29a5f739]::build::mir_built
+  26:     0x7ffe5c29a0ef - <rustc_query_impl[13074ef8a9c5819f]::plumbing::QueryCtxt as rustc_query_system[e651ff0a024a25b9]::query::QueryContext>::load_side_effects
+  27:     0x7ffe5c2f663f - <rustc_query_impl[13074ef8a9c5819f]::plumbing::QueryCtxt as rustc_query_system[e651ff0a024a25b9]::query::QueryContext>::load_side_effects
+  28:     0x7ffe5c36f72d - <rustc_query_impl[13074ef8a9c5819f]::plumbing::QueryCtxt as rustc_query_system[e651ff0a024a25b9]::query::QueryContext>::load_side_effects
+  29:     0x7ffe5b5cd05b - rustc_query_impl[13074ef8a9c5819f]::profiling_support::alloc_self_profile_query_strings
+  30:     0x7ffe5b55ecf9 - rustc_query_impl[13074ef8a9c5819f]::profiling_support::alloc_self_profile_query_strings
+  31:     0x7ffe5c29a740 - <rustc_query_impl[13074ef8a9c5819f]::plumbing::QueryCtxt as rustc_query_system[e651ff0a024a25b9]::query::QueryContext>::load_side_effects
+  32:     0x7ffe5c36e60b - <rustc_query_impl[13074ef8a9c5819f]::plumbing::QueryCtxt as rustc_query_system[e651ff0a024a25b9]::query::QueryContext>::load_side_effects
+  33:     0x7ffe5c300323 - <rustc_query_impl[13074ef8a9c5819f]::plumbing::QueryCtxt as rustc_query_system[e651ff0a024a25b9]::query::QueryContext>::load_side_effects
+  34:     0x7ffe5bc83d44 - rustc_mir_transform[e0cbdefb79924dcd]::check_unsafety::unsafety_check_result
+  35:     0x7ffe5c2998cf - <rustc_query_impl[13074ef8a9c5819f]::plumbing::QueryCtxt as rustc_query_system[e651ff0a024a25b9]::query::QueryContext>::load_side_effects
+  36:     0x7ffe5c2f619f - <rustc_query_impl[13074ef8a9c5819f]::plumbing::QueryCtxt as rustc_query_system[e651ff0a024a25b9]::query::QueryContext>::load_side_effects
+  37:     0x7ffe5c36f72d - <rustc_query_impl[13074ef8a9c5819f]::plumbing::QueryCtxt as rustc_query_system[e651ff0a024a25b9]::query::QueryContext>::load_side_effects
+  38:     0x7ffe5b5cd05b - rustc_query_impl[13074ef8a9c5819f]::profiling_support::alloc_self_profile_query_strings
+  39:     0x7ffe5b55c439 - rustc_query_impl[13074ef8a9c5819f]::profiling_support::alloc_self_profile_query_strings
+  40:     0x7ffe5c29a740 - <rustc_query_impl[13074ef8a9c5819f]::plumbing::QueryCtxt as rustc_query_system[e651ff0a024a25b9]::query::QueryContext>::load_side_effects
+  41:     0x7ffe5c29a6d8 - <rustc_query_impl[13074ef8a9c5819f]::plumbing::QueryCtxt as rustc_query_system[e651ff0a024a25b9]::query::QueryContext>::load_side_effects
+  42:     0x7ffe5c29a6d8 - <rustc_query_impl[13074ef8a9c5819f]::plumbing::QueryCtxt as rustc_query_system[e651ff0a024a25b9]::query::QueryContext>::load_side_effects
+  43:     0x7ffe5c36e60b - <rustc_query_impl[13074ef8a9c5819f]::plumbing::QueryCtxt as rustc_query_system[e651ff0a024a25b9]::query::QueryContext>::load_side_effects
+  44:     0x7ffe5c3012ac - <rustc_query_impl[13074ef8a9c5819f]::plumbing::QueryCtxt as rustc_query_system[e651ff0a024a25b9]::query::QueryContext>::load_side_effects
+  45:     0x7ffe5b2f36f5 - rustc_hir_analysis[64f3e4550aff205a]::collect::type_of::type_of_opaque
+  46:     0x7ffe5b56a755 - rustc_query_impl[13074ef8a9c5819f]::profiling_support::alloc_self_profile_query_strings
+  47:     0x7ffe5b58f773 - rustc_query_impl[13074ef8a9c5819f]::profiling_support::alloc_self_profile_query_strings
+  48:     0x7ffe5c349295 - <rustc_query_impl[13074ef8a9c5819f]::plumbing::QueryCtxt as rustc_query_system[e651ff0a024a25b9]::query::QueryContext>::load_side_effects
+  49:     0x7ffe5b5cc79e - rustc_query_impl[13074ef8a9c5819f]::profiling_support::alloc_self_profile_query_strings
+  50:     0x7ffe5d37e6bf - <rustc_span[ec07c0dc73c08e9b]::def_id::DefIndex as rustc_query_impl[13074ef8a9c5819f]::profiling_support::SpecIntoSelfProfilingString>::spec_to_self_profile_string
+  51:     0x7ffe5c29a740 - <rustc_query_impl[13074ef8a9c5819f]::plumbing::QueryCtxt as rustc_query_system[e651ff0a024a25b9]::query::QueryContext>::load_side_effects
+  52:     0x7ffe5c349a65 - <rustc_query_impl[13074ef8a9c5819f]::plumbing::QueryCtxt as rustc_query_system[e651ff0a024a25b9]::query::QueryContext>::load_side_effects
+  53:     0x7ffe5c2faca7 - <rustc_query_impl[13074ef8a9c5819f]::plumbing::QueryCtxt as rustc_query_system[e651ff0a024a25b9]::query::QueryContext>::load_side_effects
+  54:     0x7ffe5bbb33df - rustc_privacy[cbe7275059d66654]::check_private_in_public
+  55:     0x7ffe5bbb77a1 - rustc_hir_analysis[64f3e4550aff205a]::check::check::check_mod_item_types
+  56:     0x7ffe5b56b6cf - rustc_query_impl[13074ef8a9c5819f]::profiling_support::alloc_self_profile_query_strings
+  57:     0x7ffe5b59470f - rustc_query_impl[13074ef8a9c5819f]::profiling_support::alloc_self_profile_query_strings
+  58:     0x7ffe5b5a40e1 - rustc_query_impl[13074ef8a9c5819f]::profiling_support::alloc_self_profile_query_strings
+  59:     0x7ffe5b5ebf90 - rustc_query_impl[13074ef8a9c5819f]::profiling_support::alloc_self_profile_query_strings
+  60:     0x7ffe5b5b2409 - rustc_query_impl[13074ef8a9c5819f]::profiling_support::alloc_self_profile_query_strings
+  61:     0x7ffe5b31391c - <rustc_hir_analysis[64f3e4550aff205a]::variance::variance_of_opaque::{closure#0}::OpaqueTypeLifetimeCollector as rustc_type_ir[b4cb43aabc56a0ca]::visit::TypeVisitor<rustc_middle[7e6283189401cadc]::ty::context::TyCtxt>>::visit_ty
+  62:     0x7ffe5b2f48d6 - rustc_hir_analysis[64f3e4550aff205a]::check_crate
+  63:     0x7ffe58b37d17 - rustc_interface[dac95287f3cf5f6c]::passes::analysis
+  64:     0x7ffe5b56cacd - rustc_query_impl[13074ef8a9c5819f]::profiling_support::alloc_self_profile_query_strings
+  65:     0x7ffe5b58a6c9 - rustc_query_impl[13074ef8a9c5819f]::profiling_support::alloc_self_profile_query_strings
+  66:     0x7ffe5b5a3e8c - rustc_query_impl[13074ef8a9c5819f]::profiling_support::alloc_self_profile_query_strings
+  67:     0x7ffe5b5d3d1c - rustc_query_impl[13074ef8a9c5819f]::profiling_support::alloc_self_profile_query_strings
+  68:     0x7ffe5b5a90da - rustc_query_impl[13074ef8a9c5819f]::profiling_support::alloc_self_profile_query_strings
+  69:     0x7ffe58aece5b - <rustc_middle[7e6283189401cadc]::ty::SymbolName as core[47174a2617d5dae9]::fmt::Debug>::fmt
+  70:     0x7ffe58aeb131 - <rustc_middle[7e6283189401cadc]::ty::SymbolName as core[47174a2617d5dae9]::fmt::Debug>::fmt
+  71:     0x7ffe58ae014b - rustc_driver_impl[e0be14f26e428967]::args::arg_expand_all
+  72:     0x7ffe58aeca21 - <rustc_middle[7e6283189401cadc]::ty::SymbolName as core[47174a2617d5dae9]::fmt::Debug>::fmt
+  73:     0x7ffe58b013df - <rustc_middle[7e6283189401cadc]::ty::SymbolName as core[47174a2617d5dae9]::fmt::Debug>::fmt
+  74:     0x7ffe58ae3511 - rustc_driver_impl[e0be14f26e428967]::args::arg_expand_all
+  75:     0x7ffe8ccda43c - std::sys::windows::thread::Thread::new::h5234bfa8e99c1e7f
+  76:     0x7fff1bb9257d - BaseThreadInitThunk
+  77:     0x7fff1d1eaa58 - RtlUserThreadStart
+
+
+rustc version: 1.75.0-nightly (fee5518cd 2023-11-05)
+platform: x86_64-pc-windows-msvc
+
+query stack during panic:
+#0 [check_liveness] checking liveness of variables in `amain::{closure#0}`
+#1 [mir_built] building MIR for `amain::{closure#0}`
+#2 [unsafety_check_result] unsafety-checking `amain::{closure#0}`
+#3 [unsafety_check_result] unsafety-checking `amain`
+#4 [mir_borrowck] borrow-checking `amain`
+#5 [type_of_opaque] computing type of opaque `amain::{opaque#0}`
+#6 [type_of] computing type of `amain::{opaque#0}`
+#7 [check_mod_item_types] checking item types in top-level module
+#8 [analysis] running analysis passes on this crate
+end of query stack
