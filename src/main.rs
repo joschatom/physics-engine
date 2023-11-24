@@ -23,7 +23,7 @@ use vek::Vec2;
 #[macroquad::main("Physics Engine")]
 async fn main() {
     let mut world = specs::World::new();
-    let mut dispatcher_builder = DispatcherBuilder::new().register_systems();
+    let dispatcher_builder = DispatcherBuilder::new().register_systems();
     let mut dispatcher = dispatcher_builder.build();
 
     world.register::<comp::Pos>();

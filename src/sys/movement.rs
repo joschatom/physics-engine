@@ -21,8 +21,8 @@ impl<'a> System<'a> for MoveAndSyncSys {
     fn run(&mut self, (mut pos, mut prev_pos, mut vel, mut sim_vel): Self::SystemData) {
         (&mut pos, &mut prev_pos, &mut vel, &mut sim_vel)
             .par_join()
-            .for_each(|(pos, prev_pos, vel, sim_vel)| {
-                if (vel.0.y < 0.0) {
+            .for_each(|(pos, _prev_pos, vel, sim_vel)| {
+                if vel.0.y < 0.0 {
                     println!("SYNC {:?} <=> {:?}", vel.0, sim_vel.0);
                 } else {
                 }

@@ -9,5 +9,5 @@ impl<'a> System<'a> for EntitySpawnerSys {
     // These are the resources required for execution.
     type SystemData = Write<'a, EntitiesRes>;
 
-    fn run(&mut self, (entities): Self::SystemData) {}
+    fn run(&mut self, _entities: Self::SystemData) {}
 }
