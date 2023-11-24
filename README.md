@@ -1,3 +1,5 @@
+[![Publish Release](https://github.com/joschatom/physics-engine/actions/workflows/publish_release.yml/badge.svg?branch=stable)](https://github.com/joschatom/physics-engine/actions/workflows/publish_release.yml)
+
 # Physics Engine
 
 ## About
