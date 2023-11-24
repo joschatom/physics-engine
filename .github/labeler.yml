@@ -1,0 +1,10 @@
+cargo-config:
+- Cargo.toml
+
+code-comp:
+- src/comp/**
+- src/comp/mod.rs
+
+code-sys:
+- src/sys/**
+- src/sys/mod.rs
