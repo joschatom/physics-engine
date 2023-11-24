@@ -15,9 +15,11 @@ pub trait DispatcherBuilderExt {
 
 impl<'a, 'b> DispatcherBuilderExt for DispatcherBuilder<'a, 'b> {
     fn register_systems(self) -> Self {
-        self
-            .with(PhysicsSimSys, "physics_sim", &[])
-            .with(movement::MoveAndSyncSys, "move_and_sync", &["physics_sim"])
+        self.with(PhysicsSimSys, "physics_sim", &[]).with(
+            movement::MoveAndSyncSys,
+            "move_and_sync",
+            &["physics_sim"],
+        )
         //  .with(borders::BordersSys(screen_height(), screen_width()), "border_bounds", &[]).
     }
 }
