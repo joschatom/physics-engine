@@ -1,5 +1,4 @@
-use specs::{System, ReadStorage, WriteStorage, Join as _};
-use macroquad::window::{};
+use specs::{Join as _, ReadStorage, System, WriteStorage};
 
 use crate::comp::{Pos, Vel};
 
@@ -10,16 +9,17 @@ impl<'a> System<'a> for BordersSys {
     type SystemData = (WriteStorage<'a, Pos>);
 
     fn run(&mut self, (mut pos_storage): Self::SystemData) {
-        for pos in pos_storage.as_mut_slice(){
-            if pos.0.x < 0.0{
-                pos.0.x = self.1; 
-            }else if pos.0.x > self.1{
+        for pos in pos_storage.as_mut_slice() {
+            if pos.0.x < 0.0 {
+                pos.0.x = self.1;
+            } else if pos.0.x > self.1 {
                 pos.0.x = 0.0;
-            }else if pos.0.y > self.0{
+            } else if pos.0.y > self.0 {
                 pos.0.y = 0.0;
-            }else if pos.0.x < 0.0{
+            } else if pos.0.x < 0.0 {
                 pos.0.x = self.0;
-            }else {}
+            } else {
+            }
         }
     }
 }

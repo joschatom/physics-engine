@@ -1,14 +1,9 @@
-
-
+pub mod body;
+pub mod builder_ext;
+pub mod mass;
 pub mod pos;
 pub mod vel;
-pub mod body;
 pub mod zindex;
 
 #[allow(unused_imports)]
-pub use {
-    body::Body,
-    pos::Pos,
-    vel::Vel,
-    zindex::ZIdx,
-};
+pub use {body::Body, mass::Mass, pos::Pos, pos::PrevPos, vel::Vel, vel::SimVel, zindex::ZIdx};
