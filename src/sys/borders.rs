@@ -6,9 +6,9 @@ pub(crate) struct BordersSys(pub f32, pub f32);
 
 impl<'a> System<'a> for BordersSys {
     // These are the resources required for execution.
-    type SystemData = (WriteStorage<'a, Pos>);
+    type SystemData = WriteStorage<'a, Pos>;
 
-    fn run(&mut self, (mut pos_storage): Self::SystemData) {
+    fn run(&mut self, mut pos_storage: Self::SystemData) {
         for pos in pos_storage.as_mut_slice() {
             if pos.0.x < 0.0 {
                 pos.0.x = self.1;
