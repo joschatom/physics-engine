@@ -15,8 +15,8 @@ You must have **`git`** installed, then run the following command to clone the r
 
 ```sh
 git clone https://github.com/joschatom/physics-engine.git
-git switch -b stable # Remove this if you want to compile the unstable codebase.
 cd physics-engine
+git switch -b stable # Remove this if you want to compile the unstable codebase.
 ```
 
 ### Installing Rust
