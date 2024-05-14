@@ -8,5 +8,5 @@ edition = "2021"
 [dependencies]
 macroquad = "0.4.5"
 specs = "0.20.0"
-vek = "0.16.1"
+vek = "0.17.0"
 rand = "0.8.5"
